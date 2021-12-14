@@ -20,6 +20,9 @@ func bigSorting(unsorted: [String]) -> [String] {
     print(intArr)
     print(strAr)
     strAr.sort { $0.count < $1.count }
+    
+    strAr.sort { Int(String($0.first!))! < Int(String($1.first!))! }
+    
     print(strAr)
     
     intArr.sort()
@@ -33,5 +36,5 @@ func bigSorting(unsorted: [String]) -> [String] {
     return sumArr
 }
 
-    print(bigSorting(unsorted: ["31415926535897932384626433832795","26535897932384626433832795","1","3","10","3","5"]))
+    print(bigSorting(unsorted: ["41415926535897932384626433832795","31415926535897932384626433832795","1","3","10","3","5"]))
 
